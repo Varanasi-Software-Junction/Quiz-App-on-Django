@@ -84,6 +84,7 @@
     <center class="questiondisplay">{{question}}</center>
 </div>
 <form>
+    <textarea style="display:none;" name="result">{{results|safe}}</textarea>
     <input type="hidden" name="questionno" value="{{qno}}">
     <button class="truebutton" name="option" type="submit" value="1">True</button>
     <button class="falsebutton" name="option" type="submit" value="0">False</button>
