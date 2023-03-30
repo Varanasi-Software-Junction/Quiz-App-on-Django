@@ -7,7 +7,8 @@
             name="viewport"
     />
     <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
- <link rel="icon" type="image/x-icon" href="https://3.bp.blogspot.com/-py5FbTZgvjo/YDi1bsQq16I/AAAAAAAACB0/BxejbJBcHA4AVfkB33WYC3YlVmxElM7BwCK4BGAYYCw/s1600/Varanasi%2BSoftware%2BJunction%2BPhone%2BLogo.png">
+    <link href="https://3.bp.blogspot.com/-py5FbTZgvjo/YDi1bsQq16I/AAAAAAAACB0/BxejbJBcHA4AVfkB33WYC3YlVmxElM7BwCK4BGAYYCw/s1600/Varanasi%2BSoftware%2BJunction%2BPhone%2BLogo.png" rel="icon"
+          type="image/x-icon">
 
     <link
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -70,6 +71,7 @@
         opacity: 0.8s;
       }
 
+
     </style>
 </head>
 <body>
@@ -79,13 +81,15 @@
     </center>
 </div>
 <div class="centerdiv">
-    <center class="questiondisplay">Question</center>
+    <center class="questiondisplay">{{question}}</center>
 </div>
-<button class="truebutton" type="submit">True</button>
-<button class="falsebutton" type="submit">False</button>
+<form>
+    <input type="hidden" name="questionno" value="{{qno}}">
+    <button class="truebutton" name="option" type="submit" value="1">True</button>
+    <button class="falsebutton" name="option" type="submit" value="0">False</button>
+</form>
 <div class="results">
-    <span class="material-icons" style="color: green">check</span>
-    <span class="material-icons" style="color: red">close</span>
+    {{results|safe}}
 </div>
 </body>
 </html>
